@@ -147,6 +147,7 @@ export const getStudentAttendanceResults = async (req, res) => {
     });
 
     const result = await response.json();
+    console.log(result);
     if(result.totalRecordCount !== 0){
         const studentData = result?.value?.map(student => ({
           student_id: student.stdid,

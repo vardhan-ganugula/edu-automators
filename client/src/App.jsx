@@ -6,6 +6,7 @@ import AbsentPage from './pages/AbsentPage';
 import { Sidebar } from './components/Sidebar';
 import {Toaster} from 'react-hot-toast'
 import StudentAttendance from './pages/StudentAttendance';
+import DialogBox from './components/DialogBox';
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
         <div className='w-[15vw] flex-shrink'>
           <Sidebar />
         </div>
+        <DialogBox />
         <div className='w-[85vw] flex h-screen overflow-y-auto overflow-x-hidden'>
           <Routes>
             <Route path='/' element={<Homepage />} />
