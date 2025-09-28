@@ -46,7 +46,7 @@ app.get('/api/student-attendance', getStudentAttendanceResults);
 app.post('/api/initiate-absentees-process', initiateAbsenteesTask);
 
 app.get('/api/testing', (req, res) => {
-  res.json({ message: "Testing endpoint is working!" });
+  res.json({ message: "Testing endpoint is working! " });
 });
 
 const __dirname = path.resolve();
