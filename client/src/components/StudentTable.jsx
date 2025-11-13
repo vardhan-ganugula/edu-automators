@@ -21,15 +21,11 @@ const StudentTable = () => {
           },
         }
       );
-      let result;
-      if(response.status === 'ok'){
-        result = await response.json();
-      }else{
-        result = [];
-      }
+      let result = await response.json();
+
       setStudentDetails(result?.studentData || []);
       setAbsentees(
-        result.studentData.map((stud) => ({
+        result?.studentData?.map((stud) => ({
           stdid: stud.studentId,
           attdate: selectedDate,
           isPresent: false,
